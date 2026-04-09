@@ -20,7 +20,7 @@ export default function AboutStats() {
 
         <div>
           <p className="max-w-[34ch] text-2xl leading-[1.55] tracking-[-0.03em] text-[var(--color-brand-blue-deep)] lg:text-[2rem]">
-            Westeel Building OPC Pvt Ltd is a fast-growing construction company
+            Westeel Building (OPC) Pvt Ltd is a fast-growing construction company
             specializing in steel structures and modern building technologies.
             We deliver high-quality construction solutions for warehouses,
             factories, industrial sheds, modular prefab buildings, and rooftop
@@ -32,9 +32,9 @@ export default function AboutStats() {
         <aside className="rounded-[28px] border border-[rgba(0,87,173,0.1)] bg-[linear-gradient(180deg,rgba(10,34,68,1),rgba(13,36,71,0.96))] p-5 shadow-[0_24px_50px_-40px_rgba(6,16,29,0.32)] sm:p-6">
           <div className="rounded-[24px] border border-[rgba(242,192,110,0.14)] bg-[linear-gradient(180deg,rgba(0,87,173,0.12),rgba(255,255,255,0.03))] p-6">
             <p className="text-5xl font-extrabold tracking-[-0.06em] text-[var(--color-brand-gold)] sm:text-6xl">
-              1,200+
+              100+
             </p>
-            <p className="mt-3 text-base font-semibold text-white/88">
+            <p className="mt-3 text-base font-semibold text-white">
               Successful projects completed
             </p>
             <p className="mt-4 text-sm leading-6 text-[rgba(238,244,250,0.72)]">

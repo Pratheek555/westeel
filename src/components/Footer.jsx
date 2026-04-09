@@ -48,7 +48,7 @@ export default function Footer() {
             />
 
             <p className="mt-6 max-w-[34ch] text-sm leading-7 text-[rgba(238,244,250,0.72)] sm:text-[0.98rem]">
-              Westeel Building OPC Pvt Ltd delivers steel and modular
+              Westeel Building (OPC) Pvt Ltd delivers steel and modular
               construction systems built for speed, durability, and dependable
               execution across industrial, commercial, and residential projects.
             </p>
@@ -85,24 +85,46 @@ export default function Footer() {
               className="transition hover:text-[var(--color-brand-gold-soft)]"
               href="mailto:info@westeel.in"
             >
-              info@westeel.in
+              services@westeel.in
+              
             </a>
+            <a
+              className="transition hover:text-[var(--color-brand-gold-soft)]"
+              href="mailto:info@westeel.in"
+            >
+              Westeel.peb@gmail.com
+              
+            </a>
+            
             <a
               className="transition hover:text-[var(--color-brand-gold-soft)]"
               href="tel:+919876543210"
             >
-              +91 98765 43210
+              +91 6370714436
             </a>
             <span>
-              Westeel Building OPC Pvt Ltd
+              Westeel Building (OPC) Pvt Ltd
               <br />
               India
             </span>
           </FooterColumn>
+
+          <FooterColumn title="Address">
+            <a
+              className="transition hover:text-[var(--color-brand-gold-soft)]"
+              href="mailto:info@westeel.in"
+            >
+              Plot no: 24 C,
+              <br />
+              Jayadurga nagar, Jharapada,
+              <br />
+              Bhubaneswar, Odisha 751006, India
+            </a>
+          </FooterColumn>
         </div>
 
         <div className="flex flex-col gap-3 pt-6 text-sm text-[rgba(238,244,250,0.52)] sm:flex-row sm:items-center sm:justify-between">
-          <p>© 2026 Westeel Building OPC Pvt Ltd. All rights reserved.</p>
+          <p>© 2026 Westeel Building (OPC) Pvt Ltd. All rights reserved.</p>
           <p>Steel structures, prefab systems, and modular construction solutions.</p>
         </div>
       </motion.div>

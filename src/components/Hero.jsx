@@ -93,7 +93,7 @@ export default function Hero() {
           </h1>
 
           <p className="mt-5 max-w-[30ch] text-[0.98rem] leading-8 text-[rgba(238,244,250,0.8)] sm:mt-6 sm:max-w-[44ch] sm:text-lg sm:text-[rgba(238,244,250,0.86)]">
-            Westeel Building OPC Pvt Ltd provides innovative construction
+            Westeel Building (OPC) Pvt Ltd provides innovative construction
             solutions including Pre-Engineered Buildings, Modular Prefab
             Structures, Industrial Sheds, and Terrace Rooftop Structures for
             commercial, industrial, and residential applications.
@@ -119,7 +119,7 @@ export default function Hero() {
           <a
             aria-label="Chat on WhatsApp"
             className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-[#0f1b12] shadow-[0_20px_40px_-24px_rgba(0,0,0,0.7)] transition hover:scale-105"
-            href="https://wa.me/919876543210"
+            href="https://wa.me/916371655148"
             rel="noreferrer"
             target="_blank"
           >

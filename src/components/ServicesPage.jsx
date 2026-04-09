@@ -215,13 +215,13 @@ export default function ServicesPage() {
               >
                 <div className="max-w-[760px]">
                   <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--color-brand-gold-soft)]">
-                    Westeel Building OPC Pvt Ltd
+                    Westeel Building (OPC) Pvt Ltd
                   </p>
                   <h1 className="mt-4 max-w-[13ch] text-4xl font-semibold leading-[0.94] tracking-[-0.06em] text-white sm:text-5xl lg:text-[4.6rem]">
                     Industrial steel structures and prefabricated building solutions
                   </h1>
                   <p className="mt-6 max-w-[60ch] text-base leading-8 text-[rgba(238,244,250,0.78)] sm:text-lg">
-                    At Westeel Building OPC Pvt Ltd, we deliver engineering-driven
+                    At Westeel Building (OPC) Pvt Ltd, we deliver engineering-driven
                     steel construction and prefabricated building solutions for
                     industrial, commercial, and residential projects.
                   </p>
