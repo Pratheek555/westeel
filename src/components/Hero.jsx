@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ContactEnquiryDialog from "./ContactEnquiryDialog";
+import { WHATSAPP_URL } from "../utils/contact";
+
+const heroSlides = ["/landing_image.PNG", "/landingpage_slideshow/IMG_2900.PNG"];
 
 function ArrowCircleIcon() {
   return (
@@ -54,6 +57,19 @@ function ContactIcon() {
 
 export default function Hero() {
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  useEffect(() => {
+    if (heroSlides.length < 2) {
+      return undefined;
+    }
+
+    const intervalId = window.setInterval(() => {
+      setActiveSlide((currentSlide) => (currentSlide + 1) % heroSlides.length);
+    }, 4500);
+
+    return () => window.clearInterval(intervalId);
+  }, []);
 
   return (
     <section
@@ -62,11 +78,16 @@ export default function Hero() {
     >
       <div className="absolute inset-0">
         <div className="absolute inset-0 overflow-hidden">
-          <img
-            alt="Westeel landing background"
-            className="h-full w-full object-cover object-center"
-            src="/landing_image.PNG"
-          />
+          {heroSlides.map((slide, index) => (
+            <img
+              key={slide}
+              alt="Westeel landing background"
+              className={`absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-[1600ms] ease-out ${
+                index === activeSlide ? "opacity-100" : "opacity-0"
+              }`}
+              src={slide}
+            />
+          ))}
         </div>
         <div className="absolute inset-0 bg-[rgba(17,14,12,0.42)]" />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(16,13,11,0.68)_0%,rgba(24,19,15,0.56)_35%,rgba(20,17,14,0.48)_68%,rgba(12,10,9,0.72)_100%)]" />
@@ -119,7 +140,7 @@ export default function Hero() {
           <a
             aria-label="Chat on WhatsApp"
             className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-[#0f1b12] shadow-[0_20px_40px_-24px_rgba(0,0,0,0.7)] transition hover:scale-105"
-            href="https://wa.me/916371655148"
+            href={WHATSAPP_URL}
             rel="noreferrer"
             target="_blank"
           >
@@ -136,6 +157,28 @@ export default function Hero() {
           </button>
         </div>
       </div>
+
+      {heroSlides.length > 1 ? (
+        <div className="absolute bottom-10 left-1/2 z-20 flex -translate-x-1/2 items-center gap-3">
+          {heroSlides.map((slide, index) => {
+            const isActive = index === activeSlide;
+
+            return (
+              <button
+                key={`${slide}-dot`}
+                aria-label={`Show slide ${index + 1}`}
+                className={`h-2.5 rounded-full transition-all duration-300 ${
+                  isActive
+                    ? "w-10 bg-[var(--color-brand-gold)]"
+                    : "w-2.5 bg-white/45 hover:bg-white/75"
+                }`}
+                onClick={() => setActiveSlide(index)}
+                type="button"
+              />
+            );
+          })}
+        </div>
+      ) : null}
 
       <ContactEnquiryDialog
         isOpen={isContactDialogOpen}

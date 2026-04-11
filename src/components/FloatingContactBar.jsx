@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import ContactEnquiryDialog from "./ContactEnquiryDialog";
-
-const WHATSAPP_NUMBER = "919876543210";
+import { WHATSAPP_URL } from "../utils/contact";
 
 export default function FloatingContactBar() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -19,7 +18,7 @@ export default function FloatingContactBar() {
           >
             <a
               className="flex min-h-12 flex-1 items-center justify-center gap-2 rounded-[20px] bg-[#25D366] px-4 py-3 text-sm font-semibold text-[#041b10] transition hover:brightness-105"
-              href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hello%20Westeel%2C%20I%20would%20like%20to%20discuss%20a%20project.`}
+              href={WHATSAPP_URL}
               rel="noreferrer"
               target="_blank"
             >

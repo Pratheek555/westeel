@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { handleNavigationClick } from "../utils/navigation";
+import { WHATSAPP_URL } from "../utils/contact";
 
 const navItems = [
   { label: "Home", href: "/", activePath: "/" },
   { label: "About", href: "/#about" },
   { label: "Services", href: "/services", activePath: "/services" },
-  { label: "Industries", href: "/#industries" },
+  { label: "Projects", href: "/projects", activePath: "/projects" },
   { label: "Contact", href: "/#contact" },
 ];
 
@@ -53,8 +54,9 @@ export default function Navbar({ currentPath = "/" }) {
         <div className="hidden shrink-0 lg:block">
           <a
             className="inline-flex items-center rounded-full bg-[var(--color-brand-gold)] px-6 py-3 text-sm font-semibold text-[var(--color-brand-blue-deep)] shadow-[0_18px_32px_-24px_rgba(6,16,29,0.9)] transition hover:bg-[var(--color-brand-gold-soft)]"
-            href="/#contact"
-            onClick={(event) => handleNavigationClick(event, "/#contact")}
+            href={WHATSAPP_URL}
+            rel="noreferrer"
+            target="_blank"
           >
             Get Started
           </a>
@@ -117,11 +119,10 @@ export default function Navbar({ currentPath = "/" }) {
               ))}
               <a
                 className="mt-2 inline-flex items-center justify-center rounded-full bg-[var(--color-brand-gold)] px-5 py-3 text-sm font-semibold text-[var(--color-brand-blue-deep)] transition hover:bg-[var(--color-brand-gold-soft)]"
-                href="/#contact"
-                onClick={(event) => {
-                  handleNavigationClick(event, "/#contact");
-                  setIsOpen(false);
-                }}
+                href={WHATSAPP_URL}
+                onClick={() => setIsOpen(false)}
+                rel="noreferrer"
+                target="_blank"
               >
                 Get Started
               </a>

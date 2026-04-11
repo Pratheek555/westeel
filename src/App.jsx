@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import LandingPage from "./components/LandingPage";
+import ProjectsPage from "./components/ProjectsPage";
 import ServicesPage from "./components/ServicesPage";
 import FloatingContactBar from "./components/FloatingContactBar";
 import { getCurrentLocation, normalizePath } from "./utils/navigation";
@@ -38,9 +39,13 @@ export default function App() {
     });
   }, [location.hash, location.pathname]);
 
+  const normalizedPath = normalizePath(location.pathname);
+
   const currentPage =
-    normalizePath(location.pathname) === "/services" ? (
+    normalizedPath === "/services" ? (
       <ServicesPage />
+    ) : normalizedPath === "/projects" ? (
+      <ProjectsPage />
     ) : (
       <LandingPage />
     );

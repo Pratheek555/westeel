@@ -22,7 +22,7 @@ const industries = [
       "Flexible structural solutions for offices, retail developments, and mixed-use spaces that need both performance and visual clarity.",
   },
   {
-    title: "Residential Projects",
+    title: "Modular Homes",
     description:
       "Modular and steel-led residential builds tailored for fast delivery, long-term strength, and modern living requirements.",
   },

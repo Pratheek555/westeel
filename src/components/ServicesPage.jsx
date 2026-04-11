@@ -35,61 +35,6 @@ const serviceSections = [
   {
     id: "service-02",
     number: "02",
-    title: "Conventional Steel Building Structures",
-    description:
-      "Our team constructs custom conventional steel structures designed according to project load requirements and architectural specifications.",
-    lists: [
-      {
-        title: "Applications",
-        items: [
-          "Multi-storey steel buildings",
-          "Industrial plants",
-          "Commercial complexes",
-          "Infrastructure steel frameworks",
-        ],
-      },
-    ],
-  },
-  {
-    id: "service-03",
-    number: "03",
-    title: "Tubular Steel Structure Buildings",
-    description:
-      "We specialize in tubular steel structural systems that provide high strength with lightweight structural members.",
-    lists: [
-      {
-        title: "Applications",
-        items: [
-          "Stadium roofing structures",
-          "Space frame buildings",
-          "Industrial sheds",
-          "Airport and terminal structures",
-          "Architectural steel frameworks",
-        ],
-      },
-    ],
-  },
-  {
-    id: "service-04",
-    number: "04",
-    title: "Elevated Steel Structures",
-    description:
-      "We design and build elevated steel structural platforms and support systems used in industrial environments and equipment installations.",
-    lists: [
-      {
-        title: "Applications",
-        items: [
-          "Mezzanine floors",
-          "Industrial equipment platforms",
-          "Elevated machine support structures",
-          "Control rooms and plant platforms",
-        ],
-      },
-    ],
-  },
-  {
-    id: "service-05",
-    number: "05",
     title: "Prefabricated Modular Homes & Buildings",
     description:
       "We provide modern prefabricated modular building solutions that are faster, cost-efficient, and environmentally friendly compared to conventional construction.",
@@ -116,6 +61,61 @@ const serviceSections = [
           "Flexible and expandable design",
           "Minimal construction waste",
           "Strong and durable steel structures",
+        ],
+      },
+    ],
+  },
+  {
+    id: "service-03",
+    number: "03",
+    title: "Conventional Steel Building Structures",
+    description:
+      "Our team constructs custom conventional steel structures designed according to project load requirements and architectural specifications.",
+    lists: [
+      {
+        title: "Applications",
+        items: [
+          "Multi-storey steel buildings",
+          "Industrial plants",
+          "Commercial complexes",
+          "Infrastructure steel frameworks",
+        ],
+      },
+    ],
+  },
+  {
+    id: "service-04",
+    number: "04",
+    title: "Tubular Steel Structure Buildings",
+    description:
+      "We specialize in tubular steel structural systems that provide high strength with lightweight structural members.",
+    lists: [
+      {
+        title: "Applications",
+        items: [
+          "Stadium roofing structures",
+          "Space frame buildings",
+          "Industrial sheds",
+          "Airport and terminal structures",
+          "Architectural steel frameworks",
+        ],
+      },
+    ],
+  },
+  {
+    id: "service-05",
+    number: "05",
+    title: "Elevated Steel Structures",
+    description:
+      "We design and build elevated steel structural platforms and support systems used in industrial environments and equipment installations.",
+    lists: [
+      {
+        title: "Applications",
+        items: [
+          "Mezzanine floors",
+          "Industrial equipment platforms",
+          "Elevated machine support structures",
+          "Control rooms and plant platforms",
         ],
       },
     ],
@@ -158,7 +158,7 @@ const serviceSections = [
       },
     ],
     note:
-      "Our flexible execution model allows us to work with client-supplied materials, outsourced fabrication, or full project contracts depending on project requirements.",
+      "Our flexible execution model allows us to work with client-supplied materials, On-site Fabrication and erection, or full project contracts depending on project requirements.",
   },
 ];
 
