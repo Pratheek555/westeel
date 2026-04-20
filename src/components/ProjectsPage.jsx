@@ -20,6 +20,11 @@ const projectHighlights = [
     description:
       "The page keeps a direct path back to contact so project discovery flows into enquiry without friction.",
   },
+  {
+    title: "Proven project scale & diversity",
+    description:
+      "From small installations to large industrial builds, the portfolio reflects the range, consistency, and reliability of our execution.",
+  },
 ];
 
 export default function ProjectsPage() {
@@ -63,7 +68,7 @@ export default function ProjectsPage() {
                   </p>
                 </div>
 
-                <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
+                <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-2">
                   {projectHighlights.map((item) => (
                     <div
                       key={item.title}
