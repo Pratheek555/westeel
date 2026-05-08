@@ -3,10 +3,10 @@ import { useEffect, useState } from "react";
 import ContactEnquiryDialog from "./ContactEnquiryDialog";
 import { WHATSAPP_URL } from "../utils/contact";
 
-const heroSlides = ["/landing_image.PNG",
-  "/landingpage_slideshow/IMG_MODULAR.jpeg",
-  "/landingpage_slideshow/IMG_2900.PNG",
-  "/landingpage_slideshow/IMG_2901.PNG",];
+const heroSlides = ["/landing_image.webp",
+  "/landingpage_slideshow/IMG_MODULAR.webp",
+  "/landingpage_slideshow/IMG_2900.webp",
+  "/landingpage_slideshow/IMG_2901.webp",];
 
 function ArrowCircleIcon() {
   return (
@@ -88,6 +88,9 @@ export default function Hero() {
               className={`absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-[1600ms] ease-out ${
                 index === activeSlide ? "opacity-100" : "opacity-0"
               }`}
+              decoding="async"
+              fetchPriority={index === 0 ? "high" : "low"}
+              loading={index === 0 ? "eager" : "lazy"}
               src={slide}
             />
           ))}
