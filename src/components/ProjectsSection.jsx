@@ -10,254 +10,167 @@ const categories = [
       "A quick look across steel structures, roofing, flooring, fabrication, and civil execution work.",
   },
   {
-    id: "warehouse",
-    label: "Warehouse",
+    id: "peb",
+    label: "PEB Structures",
     description:
       "Pre-engineered building frames built for long spans, faster erection, and efficient site execution.",
   },
   {
-    id: "industrial_sheds",
-    label: "Industrial Sheds",
+    id: "roofing",
+    label: "Metal Roofing",
     description:
       "Roofing systems detailed for weather protection, clean finishes, and durable industrial coverage.",
   },
   {
-    id: "multistory",
-    label: "Multi Story Building",
+    id: "vdf",
+    label: "VDF Flooring",
     description:
       "Flatness-focused flooring work planned for heavy use, movement efficiency, and dependable finish quality.",
   },
   {
-    id: "structural",
-    label: "Structural Systems",
+    id: "building",
+    label: "Building Fabrication",
     description:
       "Fabrication-led building packages prepared for practical assembly, structural clarity, and execution speed.",
   },
-  // {
-  //   id: "civil",
-  //   label: "Civil Construction",
-  //   description:
-  //     "Ground-up civil work aligned with the structural package to keep project delivery coordinated end to end.",
-  // },
+  {
+    id: "civil",
+    label: "Civil Construction",
+    description:
+      "Ground-up civil work aligned with the structural package to keep project delivery coordinated end to end.",
+  },
   {
     id: "modular",
     label: "Modular Construction",
     description:
-      "Modular Construction - Prefabricated building sections delivered to site for fast assembly.",
+      "Prefabricated building sections delivered to site for fast assembly.",
   },
 ];
 
 const projects = [
-  // warehouses
   {
     title: "PEB Frame Installation",
-    category: "warehouse",
-    image: "/projects/warehouse1.PNG",
+    category: "peb",
+    image: "/projects/peb1.jpg",
     stage: "Steel structure execution",
     detail: "Clear-span primary framing",
   },
   {
     title: "Industrial Shed Assembly",
-    category: "warehouse",
-    image: "/projects/warehouse2.PNG",
+    category: "peb",
+    image: "/projects/peb2.jpg",
     stage: "On-site erection progress",
     detail: "Fast-track structural package",
   },
-  {
-    title: "Industrial Shed Assembly",
-    category: "warehouse",
-    image: "/projects/warehouse3.PNG",
-    stage: "On-site erection progress",
-    detail: "Fast-track structural package",
-  },
-  {
-    title: "Industrial Shed Assembly",
-    category: "warehouse",
-    image: "/projects/warehouse4.PNG",
-    stage: "On-site erection progress",
-    detail: "Fast-track structural package",
-  },
-  {
-    title: "Industrial Shed Assembly",
-    category: "warehouse",
-    image: "/projects/warehouse5.PNG",
-    stage: "On-site erection progress",
-    detail: "Fast-track structural package",
-  },
-
-  // Industrial sheds
   {
     title: "Standing Seam Roofing",
-    category: "industrial_sheds",
-    image: "/projects/Industrial Sheds1.PNG",
+    category: "roofing",
+    image: "/projects/metal1.jpg",
     stage: "Roof enclosure work",
     detail: "Weather-ready roof system",
   },
   {
     title: "Industrial Roofing Bay",
-    category: "industrial_sheds",
-    image: "/projects/Industrial Sheds2.PNG",
+    category: "roofing",
+    image: "/projects/metal2.jpg",
     stage: "Sheeting and detailing",
     detail: "Wide coverage installation",
   },
   {
     title: "Industrial Roofing Structure",
-    category: "industrial_sheds",
-    image: "/projects/Industrial Sheds3.PNG",
+    category: "roofing",
+    image: "/projects/roofing.jpeg",
     stage: "Sheeting and detailing",
     detail: "Wide coverage installation",
   },
   {
-    title: "Industrial Shed Assembly",
-    category: "industrial_sheds",
-    image: "/projects/Industrial Sheds4.PNG",
-    stage: "On-site erection progress",
-    detail: "Fast-track structural package",
-  },
-  {
-    title: "Industrial Shed Assembly",
-    category: "industrial_sheds",
-    image: "/projects/Industrial Sheds5.PNG",
-    stage: "On-site erection progress",
-    detail: "Fast-track structural package",
-  },
-  {
-    title: "Industrial Shed Assembly",
-    category: "industrial_sheds",
-    image: "/projects/Industrial Sheds6.PNG",
-    stage: "On-site erection progress",
-    detail: "Fast-track structural package",
-  },
-  {
-    title: "Industrial Shed Assembly",
-    category: "industrial_sheds",
-    image: "/projects/Industrial Sheds7.PNG",
-    stage: "On-site erection progress",
-    detail: "Fast-track structural package",
-  },
-  {
-    title: "Industrial Shed Assembly",
-    category: "industrial_sheds",
-    image: "/projects/Industrial Sheds8.PNG",
-    stage: "On-site erection progress",
-    detail: "Fast-track structural package",
-  },
-  {
-    title: "Industrial Shed Assembly",
-    category: "industrial_sheds",
-    image: "/projects/Industrial Sheds9.PNG",
-    stage: "On-site erection progress",
-    detail: "Fast-track structural package",
-  },
-
-
-  // multistory
-  {
     title: "VDF Floor Pour",
-    category: "multistory",
-    image: "/projects/Multi-storey Building1.PNG",
+    category: "vdf",
+    image: "/projects/vdf1.jpg",
     stage: "Flooring execution",
     detail: "Level industrial slab finish",
   },
   {
-    title: "VDF Floor Pour",
-    category: "multistory",
-    image: "/projects/Multi-storey Building2.PNG",
-    stage: "Flooring execution",
-    detail: "Level industrial slab finish",
-  },
- 
-  // structural
-  {
-    title: "Civil Foundation Works",
-    category: "structural",
-    image: "/projects/Structural systems1.PNG",
-    stage: "Site preparation and base works",
-    detail: "Coordinated groundwork package",
+    title: "Floor Finishing Zone",
+    category: "vdf",
+    image: "/projects/vdf2.jpg",
+    stage: "Surface completion work",
+    detail: "High-utility work surface",
   },
   {
     title: "Civil Foundation Works",
-    category: "structural",
-    image: "/projects/Structural systems2.PNG",
+    category: "civil",
+    image: "/projects/civil1.jpg",
     stage: "Site preparation and base works",
     detail: "Coordinated groundwork package",
   },
   {
-    title: "Civil Foundation Works",
-    category: "structural",
-    image: "/projects/Structural systems3.PNG",
-    stage: "Site preparation and base works",
-    detail: "Coordinated groundwork package",
+    title: "Core Civil Progress",
+    category: "civil",
+    image: "/projects/civil2.jpg",
+    stage: "Execution milestone",
+    detail: "Project-ready support systems",
   },
   {
-    title: "Civil Foundation Works4",
-    category: "structural",
-    image: "/projects/Structural systems4.jpeg",
-    stage: "Site preparation and base works",
-    detail: "Coordinated groundwork package",
+    title: "Fabrication Bay Exterior",
+    category: "building",
+    image: "/projects/feb1.jpg",
+    stage: "Fabricated building delivery",
+    detail: "Integrated steel envelope",
   },
   {
-    title: "Civil Foundation Works",
-    category: "structural",
-    image: "/projects/Structural systems5.PNG",
-    stage: "Site preparation and base works",
-    detail: "Coordinated groundwork package",
-  },
-  {
-    title: "Civil Foundation Works",
-    category: "structural",
-    image: "/projects/Structural systems6.PNG",
-    stage: "Site preparation and base works",
-    detail: "Coordinated groundwork package",
-  },
-  {
-    title: "Civil Foundation Works",
-    category: "structural",
-    image: "/projects/Structural systems7.PNG",
-    stage: "Site preparation and base works",
-    detail: "Coordinated groundwork package",
-  },
-  {
-    title: "Civil Foundation Works",
-    category: "structural",
-    image: "/projects/Structural systems8.PNG",
-    stage: "Site preparation and base works",
-    detail: "Coordinated groundwork package",
-  },
-  {
-    title: "Civil Foundation Works9",
-    category: "structural",
-    image: "/projects/Structural systems9.PNG",
-    stage: "Site preparation and base works",
-    detail: "Coordinated groundwork package",
-  },
-  {
-    title: "Civil Foundation Works10",
-    category: "structural",
-    image: "/projects/Structural systems10.PNG",
-    stage: "Site preparation and base works",
-    detail: "Coordinated groundwork package",
-  },
-  
-  // modular
-  {
-    title: "Modular Pod",
-    category: "modular",
-    image: "/projects/modular11.PNG",
-    stage: "Project Handover",
-    detail: "High-end finishes on a modular structure.",
+    title: "Fabricated Structure Detail",
+    category: "building",
+    image: "/projects/feb2.jpg",
+    stage: "Structural package review",
+    detail: "Built-up frame components",
   },
   {
     title: "Modern Modular Residence",
     category: "modular",
-    image: "/projects/modular_H1.png",
+    image: "/projects/modular_H.png",
     stage: "Completed Build",
     detail: "Fast-track modular residential project with premium finishes.",
   },
   {
+    title: "Commercial Building Structure",
+    category: "building",
+    image: "/projects/building.jpeg",
+    stage: "Structural Assembly",
+    detail: "Multi-story steel framework execution.",
+  },
+  {
+    title: "Industrial Building Fabrication",
+    category: "building",
+    image: "/projects/building.jpg",
+    stage: "Site Delivery",
+    detail: "Pre-fabricated building components ready for assembly.",
+  },
+  {
+    title: "Steel Building Envelope",
+    category: "building",
+    image: "/projects/building1.jpeg",
+    stage: "Enclosure Progress",
+    detail: "Primary structural support for building facade.",
+  },
+  {
+    title: "Mixed-use Building Frame",
+    category: "building",
+    image: "/projects/building1.jpg",
+    stage: "Execution Milestone",
+    detail: "Structural detailing for commercial and industrial use.",
+  },
+  {
+    title: "Heavy Structural Fabrication",
+    category: "building",
+    image: "/projects/building2.jpg",
+    stage: "Quality Inspection",
+    detail: "High-load capacity building framework.",
+  },
+  {
     title: "Modular Base - PRE FAB",
     category: "modular",
-    image: "/projects/modular_H2.PNG",
+    image: "/projects/civil.PNG",
     stage: "AI Generated Render",
     detail: "Reinforced concrete base for structural stability.",
   },
@@ -331,7 +244,27 @@ const projects = [
     stage: "Project Handover",
     detail: "High-end finishes on a modular structure.",
   },
-  
+  {
+    title: "Large Span PEB",
+    category: "peb",
+    image: "/projects/peb.jpeg",
+    stage: "Primary Framing",
+    detail: "Engineered for maximum clear floor space.",
+  },
+  {
+    title: "PEB Warehouse",
+    category: "peb",
+    image: "/projects/peb.jpg",
+    stage: "Erection Phase",
+    detail: "Rapid assembly of pre-engineered components.",
+  },
+  {
+    title: "PEB Industrial Facility",
+    category: "peb",
+    image: "/projects/peb.PNG",
+    stage: "Roofing Preparation",
+    detail: "Comprehensive pre-engineered building system.",
+  },
 ];
 
 export default function ProjectsSection() {
@@ -471,9 +404,7 @@ export default function ProjectsSection() {
                     >
                       <img
                         alt={project.title}
-                        className="block min-h-[240px] w-full object-cover transition duration-500 group-hover:scale-[1.04]"
-                        decoding="async"
-                        loading="lazy"
+                        className="block h-auto w-full transition duration-500 group-hover:scale-[1.04]"
                         src={project.image}
                       />
                       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(6,16,29,0)_0%,rgba(6,16,29,0.1)_40%,rgba(6,16,29,0.85)_100%)]" />
@@ -544,7 +475,7 @@ export default function ProjectsSection() {
                 </div>
 
                 <div className="flex flex-col justify-between p-6 text-white sm:p-8 lg:p-10">
-                  <div className="pt-10 sm:pt-8 lg:pt-6">
+                  <div>
                     <p className="text-xs font-bold uppercase tracking-[0.28em] text-[var(--color-brand-gold-soft)]">
                       {categories.find(
                         (category) => category.id === selectedProject.category,
