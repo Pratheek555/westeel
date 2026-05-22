@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import Footer from "./Footer";
 import GlassContainer from "./GlassContainer";
 import Navbar from "./Navbar";
+
 
 const serviceSections = [
   {
@@ -191,6 +193,14 @@ const deliveryHighlights = [
 export default function ServicesPage() {
   return (
     <main className="relative isolate min-h-screen w-screen overflow-x-hidden bg-[var(--color-brand-blue-ink)]">
+      <Helmet>
+        <title>Steel Construction Services — PEB, Sheds & Modular Builds | Westeel Building</title>
+        <meta
+          name="description"
+          content="Explore Westeel Building's full range of services: Pre-Engineered Buildings, Industrial Sheds, Modular Prefab Structures, Tubular Steel Buildings, Elevated Platforms, and Civil Construction across Andhra Pradesh, Odisha, Chhattisgarh & West Bengal."
+        />
+        <link rel="canonical" href="https://westeel.in/services" />
+      </Helmet>
       <div className="pointer-events-none absolute inset-0 overflow-hidden bg-[radial-gradient(circle_at_top_left,_rgba(0,87,173,0.34),_transparent_22%),radial-gradient(circle_at_top_right,_rgba(226,139,23,0.2),_transparent_18%),radial-gradient(circle_at_bottom_right,_rgba(10,34,68,0.18),_transparent_28%)]" />
 
       <motion.div

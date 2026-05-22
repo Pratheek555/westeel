@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import Footer from "./Footer";
 import GlassContainer from "./GlassContainer";
 import Navbar from "./Navbar";
@@ -30,6 +31,14 @@ const projectHighlights = [
 export default function ProjectsPage() {
   return (
     <main className="relative isolate min-h-screen w-screen overflow-x-hidden bg-[var(--color-brand-blue-ink)]">
+      <Helmet>
+        <title>PEB & Industrial Shed Projects Gallery | Westeel Building</title>
+        <meta
+          name="description"
+          content="Browse Westeel Building's completed project portfolio — Pre-Engineered Buildings, Industrial Sheds, Warehouses, Multi-Storey Steel Buildings, and Modular Structures across Andhra Pradesh, Odisha, Chhattisgarh & West Bengal."
+        />
+        <link rel="canonical" href="https://westeel.in/projects" />
+      </Helmet>
       <div className="pointer-events-none absolute inset-0 overflow-hidden bg-[radial-gradient(circle_at_top_left,_rgba(0,87,173,0.34),_transparent_22%),radial-gradient(circle_at_top_right,_rgba(226,139,23,0.2),_transparent_18%),radial-gradient(circle_at_bottom_right,_rgba(10,34,68,0.18),_transparent_28%)]" />
 
       <motion.div
