@@ -4,31 +4,31 @@ import { motion, AnimatePresence } from "framer-motion";
 const industries = [
   {
     title: "Logistics & Warehousing",
-    image: "/projects/Logistic_W.webp",
+    image: "/projects/Logistic_W.png",
     description:
       "Distribution centers, storage facilities, and fulfillment environments designed for clear spans, efficient movement, and future expansion.",
   },
   {
     title: "Manufacturing Industries",
-    image: "/projects/manufacturing.webp",
+    image: "/projects/manufacturing.png",
     description:
       "Production-ready steel structures built for heavy equipment loads, workflow efficiency, and dependable operational uptime.",
   },
   {
     title: "Infrastructure Development",
-    image: "/projects/infrastructure_D.webp",
+    image: "/projects/infrastructure_D.png",
     description:
       "Engineered systems that support public and private infrastructure projects where speed, durability, and execution discipline matter.",
   },
   {
     title: "Commercial Buildings",
-    image: "/projects/commercial_b.webp",
+    image: "/projects/commercial_b.png",
     description:
       "Flexible structural solutions for offices, retail developments, and mixed-use spaces that need both performance and visual clarity.",
   },
   {
     title: "Modular Homes",
-    image: "/projects/modular_H.webp",
+    image: "/projects/modular_H.png",
     description:
       "Modular and steel-led residential builds tailored for fast delivery, long-term strength, and modern living requirements.",
   },
@@ -158,8 +158,6 @@ export default function IndustriesSection() {
                   <img
                     alt={selectedIndustry.title}
                     className="max-h-[70vh] w-auto max-w-full rounded-[20px] object-contain shadow-2xl"
-                    decoding="async"
-                    loading="lazy"
                     src={selectedIndustry.image}
                   />
                 </div>

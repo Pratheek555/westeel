@@ -3,10 +3,10 @@ import { useEffect, useState } from "react";
 import ContactEnquiryDialog from "./ContactEnquiryDialog";
 import { WHATSAPP_URL } from "../utils/contact";
 
-const heroSlides = ["/landing_image.webp",
-  "/landingpage_slideshow/IMG_MODULAR.webp",
-  "/landingpage_slideshow/IMG_2900.webp",
-  "/landingpage_slideshow/IMG_2901.webp",];
+const heroSlides = ["/landing_image.PNG",
+  "/landingpage_slideshow/IMG_MODULAR.jpeg",
+  "/landingpage_slideshow/IMG_2900.PNG",
+  "/landingpage_slideshow/IMG_2901.PNG",];
 
 function ArrowCircleIcon() {
   return (
@@ -61,9 +61,6 @@ function ContactIcon() {
 export default function Hero() {
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
   const [activeSlide, setActiveSlide] = useState(0);
-  // Track which slides have been requested so we only download images on demand.
-  // Slide 0 is always pre-loaded (it's the LCP element).
-  const [loadedSlides, setLoadedSlides] = useState(() => new Set([0]));
 
   useEffect(() => {
     if (heroSlides.length < 2) {
@@ -71,17 +68,7 @@ export default function Hero() {
     }
 
     const intervalId = window.setInterval(() => {
-      setActiveSlide((currentSlide) => {
-        const next = (currentSlide + 1) % heroSlides.length;
-        // Preload the upcoming slide one tick ahead
-        setLoadedSlides((prev) => {
-          if (prev.has(next)) return prev;
-          const updated = new Set(prev);
-          updated.add(next);
-          return updated;
-        });
-        return next;
-      });
+      setActiveSlide((currentSlide) => (currentSlide + 1) % heroSlides.length);
     }, 4500);
 
     return () => window.clearInterval(intervalId);
@@ -97,21 +84,15 @@ export default function Hero() {
           {heroSlides.map((slide, index) => (
             <img
               key={slide}
-              alt="Westeel steel building project"
-              className={`absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-[1600ms] ease-out ${index === activeSlide ? "opacity-100" : "opacity-0"
-                }`}
-              decoding="async"
-              fetchPriority={index === 0 ? "high" : "low"}
-              height="1080"
-              loading={index === 0 ? "eager" : "lazy"}
-              // Only assign src once the slide has been activated — avoids
-              // downloading all 4 images up front (was the 961 KiB LCP hit)
-              src={loadedSlides.has(index) ? slide : undefined}
-              width="1920"
+              alt="Westeel landing background"
+              className={`absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-[1600ms] ease-out ${
+                index === activeSlide ? "opacity-100" : "opacity-0"
+              }`}
+              src={slide}
             />
           ))}
         </div>
-        <div className="absolute inset-0 bg-[rgba(17,14,12,0.0)]" />
+        <div className="absolute inset-0 bg-[rgba(17,14,12,0.42)]" />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(16,13,11,0.68)_0%,rgba(24,19,15,0.56)_35%,rgba(20,17,14,0.48)_68%,rgba(12,10,9,0.72)_100%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(226,139,23,0.18),_transparent_24%),radial-gradient(circle_at_bottom_left,_rgba(120,128,138,0.12),_transparent_28%)]" />
       </div>
@@ -190,10 +171,11 @@ export default function Hero() {
               <button
                 key={`${slide}-dot`}
                 aria-label={`Show slide ${index + 1}`}
-                className={`h-2.5 rounded-full transition-all duration-300 ${isActive
+                className={`h-2.5 rounded-full transition-all duration-300 ${
+                  isActive
                     ? "w-10 bg-[var(--color-brand-gold)]"
                     : "w-2.5 bg-white/45 hover:bg-white/75"
-                  }`}
+                }`}
                 onClick={() => setActiveSlide(index)}
                 type="button"
               />
