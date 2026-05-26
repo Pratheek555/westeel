@@ -44,8 +44,8 @@ export default function Footer() {
           <div>
             <img
               alt="Westeel logo"
-              className="h-12 w-auto object-contain sm:h-14"
-              src="/logo.png"
+              className="h-16 w-auto object-contain sm:h-24"
+              src="/white_logo.png"
             />
 
             <p className="mt-6 max-w-[34ch] text-sm leading-7 text-[rgba(238,244,250,0.72)] sm:text-[0.98rem]">
@@ -110,7 +110,7 @@ export default function Footer() {
             </span>
           </FooterColumn>
 
-          <FooterColumn title="Address">
+          <FooterColumn title="Office Address">
             <a
               className="transition hover:text-[var(--color-brand-gold-soft)]"
               href="mailto:info@westeel.in"

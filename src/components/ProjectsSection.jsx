@@ -10,108 +10,336 @@ const categories = [
       "A quick look across steel structures, roofing, flooring, fabrication, and civil execution work.",
   },
   {
-    id: "peb",
-    label: "PEB Structures",
+    id: "warehouse",
+    label: "Warehouse",
     description:
       "Pre-engineered building frames built for long spans, faster erection, and efficient site execution.",
   },
   {
-    id: "roofing",
-    label: "Metal Roofing",
+    id: "industrial_sheds",
+    label: "Industrial Sheds",
     description:
       "Roofing systems detailed for weather protection, clean finishes, and durable industrial coverage.",
   },
   {
-    id: "vdf",
-    label: "VDF Flooring",
+    id: "multistory",
+    label: "Multi Story Building",
     description:
       "Flatness-focused flooring work planned for heavy use, movement efficiency, and dependable finish quality.",
   },
   {
-    id: "building",
-    label: "Building Fabrication",
+    id: "structural",
+    label: "Structural Systems",
     description:
       "Fabrication-led building packages prepared for practical assembly, structural clarity, and execution speed.",
   },
+  // {
+  //   id: "civil",
+  //   label: "Civil Construction",
+  //   description:
+  //     "Ground-up civil work aligned with the structural package to keep project delivery coordinated end to end.",
+  // },
   {
-    id: "civil",
-    label: "Civil Construction",
+    id: "modular",
+    label: "Modular Construction",
     description:
-      "Ground-up civil work aligned with the structural package to keep project delivery coordinated end to end.",
+      "Modular Construction - Prefabricated building sections delivered to site for fast assembly.",
   },
 ];
 
 const projects = [
+  // warehouses
   {
-    title: "PEB Frame Installation",
-    category: "peb",
-    image: "/projects/peb1.jpg",
-    stage: "Steel structure execution",
-    detail: "Clear-span primary framing",
+    title: "Rice Mill Godown",
+    category: "warehouse",
+    image: "/projects/warehouse1.PNG",
+    stage: "Completed Structure",
+    detail: "Dhenkanal, Odisha",
   },
   {
-    title: "Industrial Shed Assembly",
-    category: "peb",
-    image: "/projects/peb2.jpg",
-    stage: "On-site erection progress",
-    detail: "Fast-track structural package",
+    title: "Rice Mill Godown",
+    category: "warehouse",
+    image: "/projects/warehouse2.PNG",
+    stage: "Completed Structure",
+    detail: "Bhingarpur, Cuttack, Odisha",
   },
   {
-    title: "Standing Seam Roofing",
-    category: "roofing",
-    image: "/projects/metal1.jpg",
-    stage: "Roof enclosure work",
-    detail: "Weather-ready roof system",
+    title: "Rice Mill Godown",
+    category: "warehouse",
+    image: "/projects/warehouse3.PNG",
+    stage: "Completed Structure",
+    detail: "Khorda Industrial Estate, Odisha",
   },
   {
-    title: "Industrial Roofing Bay",
-    category: "roofing",
-    image: "/projects/metal2.jpg",
-    stage: "Sheeting and detailing",
-    detail: "Wide coverage installation",
+    title: "Warehouse",
+    category: "warehouse",
+    image: "/projects/warehouse4.PNG",
+    stage: "Completed Structure",
+    detail: "Khorda Industrial Estate, Odisha",
   },
   {
-    title: "VDF Floor Pour",
-    category: "vdf",
-    image: "/projects/vdf1.jpg",
-    stage: "Flooring execution",
-    detail: "Level industrial slab finish",
+    title: "Logistic Park",
+    category: "warehouse",
+    image: "/projects/warehouse5.PNG",
+    stage: "Completed Structure",
+    detail: "Howrah, West Bengal",
+  },
+
+  // Industrial sheds
+  {
+    title: "Food Manufacturing Unit",
+    category: "industrial_sheds",
+    image: "/projects/Industrial Sheds1.PNG",
+    stage: "Completed Structure",
+    detail: "Khorda Industrial Estate, Odisha",
   },
   {
-    title: "Floor Finishing Zone",
-    category: "vdf",
-    image: "/projects/vdf2.jpg",
-    stage: "Surface completion work",
-    detail: "High-utility work surface",
+    title: "Cashew Processing Unit",
+    category: "industrial_sheds",
+    image: "/projects/Industrial Sheds2.PNG",
+    stage: "Completed Structure",
+    detail: "Tangi, Cuttack, Odisha",
   },
   {
-    title: "Civil Foundation Works",
-    category: "civil",
-    image: "/projects/civil1.jpg",
+    title: "PVC Pipe Manufacturing Unit 1",
+    category: "industrial_sheds",
+    image: "/projects/Industrial Sheds3.PNG",
+    stage: "Completed Structure",
+    detail: "Dhenkanal, Odisha",
+  },
+  {
+    title: "PVC Pipe Manufacturing Unit 2",
+    category: "industrial_sheds",
+    image: "/projects/Industrial Sheds4.PNG",
+    stage: "Completed Structure",
+    detail: "Dhenkanal, Odisha",
+  },
+  {
+    title: "Food Processing Unit 1",
+    category: "industrial_sheds",
+    image: "/projects/Industrial Sheds5.PNG",
+    stage: "Completed Structure",
+    detail: "Tangi, Cuttack, Odisha",
+  },
+  {
+    title: "Food Processing Unit 2",
+    category: "industrial_sheds",
+    image: "/projects/Industrial Sheds6.PNG",
+    stage: "Completed Structure",
+    detail: "Tangi, Cuttack, Odisha",
+  },
+  {
+    title: "Factory Building",
+    category: "industrial_sheds",
+    image: "/projects/Industrial Sheds7.PNG",
+    stage: "Completed Structure",
+    detail: "Tangi, Cuttack, Odisha",
+  },
+  {
+    title: "Steel Pipe Manufacturing Unit",
+    category: "industrial_sheds",
+    image: "/projects/Industrial Sheds8.PNG",
+    stage: "Completed Structure",
+    detail: "Jajpur, Odisha",
+  },
+  // {
+  //   title: "Multi-Storey Storage Building",
+  //   category: "industrial_sheds",
+  //   image: "/projects/Industrial Sheds9.PNG",
+  //   stage: "Completed Structure",
+  //   detail: "Kolkata, West Bengal",
+  // },
+
+
+  // multistory
+  {
+    title: "Organic Food Processing Unit",
+    category: "multistory",
+    image: "/projects/Multi-storey Building1.PNG",
+    stage: "Completed Structure",
+    detail: "Howrah, West Bengal",
+  },
+  {
+    title: "Multi-Storey Storage Building",
+    category: "multistory",
+    image: "/projects/Multi-storey Building2.PNG",
+    stage: "Completed Structure",
+    detail: "Kolkata, West Bengal",
+  },
+ 
+  // structural
+  {
+    title: "EOT Crane Building Structure",
+    category: "structural",
+    image: "/projects/Structural systems10.PNG",
+    stage: "Completed Structure",
+    detail: "Jharsuguda, Odisha",
+  },
+  {
+    title: "Castellated Cellular Structure",
+    category: "structural",
+    image: "/projects/Structural systems1.PNG",
     stage: "Site preparation and base works",
-    detail: "Coordinated groundwork package",
+    detail: "Bargarh, Odisha",
   },
   {
-    title: "Core Civil Progress",
-    category: "civil",
-    image: "/projects/civil2.jpg",
-    stage: "Execution milestone",
-    detail: "Project-ready support systems",
+    title: "Pre-Engineered Building Structure",
+    category: "structural",
+    image: "/projects/Structural systems2.PNG",
+    stage: "Completed Structure",
+    detail: "Junagarh, Kalahandi, Odisha",
   },
   {
-    title: "Fabrication Bay Exterior",
-    category: "building",
-    image: "/projects/feb1.jpg",
-    stage: "Fabricated building delivery",
-    detail: "Integrated steel envelope",
+    title: "Multi-Storey Storage Building",
+    category: "structural",
+    image: "/projects/Structural systems3.PNG",
+    stage: "Project Completed",
+    detail: "West Bengal",
   },
   {
-    title: "Fabricated Structure Detail",
-    category: "building",
-    image: "/projects/feb2.jpg",
-    stage: "Structural package review",
-    detail: "Built-up frame components",
+    title: "G+2 Commercial Building",
+    category: "structural",
+    image: "/projects/Structural systems4.jpeg",
+    stage: "Project Completed",
+    detail: "Visakhapatnam, Andhra Pradesh",
   },
+  {
+    title: "Conventionl Steel Structure",
+    category: "structural",
+    image: "/projects/Structural systems5.PNG",
+    stage: "Project Completed",
+    detail: "Kordha Industrial Estate, Odisha",
+  },
+  {
+    title: "Pre-Engineered Building Erection",
+    category: "structural",
+    image: "/projects/Structural systems6.PNG",
+    stage: "Project Completed",
+    detail: "Hyderabad, Telanagana",
+  },
+  {
+    title: "Factory Building Structure",
+    category: "structural",
+    image: "/projects/Structural systems7.PNG",
+    stage: "Completed Structure",
+    detail: "Odisha",
+  },
+  {
+    title: "PEB Structure",
+    category: "structural",
+    image: "/projects/Structural systems8.PNG",
+    stage: "Completed Structure",
+    detail: "Odisha",
+  },
+  {
+    title: "Coventional Building Structure",
+    category: "structural",
+    image: "/projects/Structural systems9.PNG",
+    stage: "Completed Structure",
+    detail: "Chandikhole, Jajpur, Odisha",
+  },
+  {
+    title: "Steel Plant Structure",
+    category: "structural",
+    image: "/projects/Structural systems11.PNG",
+    stage: "Completed Structure",
+    detail: "Keonjhar, Odisha",
+  },
+  
+  
+  // modular
+  {
+    title: "Car Showroom",
+    category: "modular",
+    image: "/projects/modular11.PNG",
+    stage: "Completed Structure",
+    detail: "Car Showroom in Bhubneswar, Odisha",
+  },
+  {
+    title: "Modern Modular Residence",
+    category: "modular",
+    image: "/projects/modular_H1.png",
+    stage: "Completed Build",
+    detail: "Fast-track modular residential project with premium finishes.",
+  },
+  {
+    title: "Modular Base - PRE FAB",
+    category: "modular",
+    image: "/projects/modular_H2.PNG",
+    stage: "AI Generated Render",
+    detail: "Reinforced concrete base for structural stability.",
+  },
+  {
+    title: "Modular Living Pod",
+    category: "modular",
+    image: "/projects/modular.PNG",
+    stage: "Completed Assembly",
+    detail: "Sustainable modular construction.",
+  },
+  {
+    title: "Office Building",
+    category: "modular",
+    image: "/projects/modular1.PNG",
+    stage: "Transport & Placement",
+    detail: "Pre-assembled modules delivered to site.",
+  },
+  {
+    title: "Prefabricated Housing",
+    category: "modular",
+    image: "/projects/modular2.PNG",
+    stage: "Final Touches",
+    detail: "Rapid deployment modular residential unit.",
+  },
+  {
+    title: "Pre-Fab Office Space",
+    category: "modular",
+    image: "/projects/modular3.PNG",
+    stage: "AI Generated Render",
+    detail: "Architecturally driven modular framework.",
+  },
+  {
+    title: "Rooftop Home",
+    category: "modular",
+    image: "/projects/rooftop_homes.PNG",
+    stage: "AI Generated Render",
+    detail: "Architecturally driven modular framework.",
+  },
+  {
+    title: "Modular Office Space",
+    category: "modular",
+    image: "/projects/modular4.PNG",
+    stage: "Interior Fit-out",
+    detail: "Flexible modular commercial environment.",
+  },
+  {
+    title: "Labour Hutment",
+    category: "modular",
+    image: "/projects/modular5.PNG",
+    stage: "AI Generated Render",
+    detail: "Quality-controlled module manufacturing.",
+  },
+  {
+    title: "Rooftop Homes",
+    category: "modular",
+    image: "/projects/modular6.PNG",
+    stage: "AI Generated Render",
+    detail: "Multi-level modular building execution.",
+  },
+  {
+    title: "Modular Wedding Hall",
+    category: "modular",
+    image: "/projects/modular8.PNG",
+    stage: "Exterior Finishing",
+    detail: "Weather-resistant modular exterior.",
+  },
+  {
+    title: "Modular Pod",
+    category: "modular",
+    image: "/projects/modular10.PNG",
+    stage: "Project Handover",
+    detail: "High-end finishes on a modular structure.",
+  },
+  
 ];
 
 export default function ProjectsSection() {
@@ -126,8 +354,6 @@ export default function ProjectsSection() {
   const activeCategoryData =
     categories.find((category) => category.id === activeCategory) ??
     categories[0];
-  const showFeaturedLayout =
-    activeCategory === "all" && visibleProjects.length > 3;
 
   useEffect(() => {
     if (!selectedProject) {
@@ -167,7 +393,7 @@ export default function ProjectsSection() {
           <div className="grid gap-10 lg:grid-cols-[minmax(280px,0.78fr)_minmax(0,1.22fr)] lg:gap-12">
             <div className="flex flex-col justify-between">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--color-brand-gold)]">
+                <p className="text-sm font-bold uppercase tracking-[0.2em] text-[var(--color-brand-gold)] sm:text-base">
                   Project Gallery
                 </p>
                 <h2 className="mt-4 max-w-[11ch] text-4xl font-semibold leading-[0.95] tracking-[-0.06em] text-[var(--color-brand-blue-deep)] sm:text-5xl">
@@ -190,9 +416,7 @@ export default function ProjectsSection() {
                       {activeCategoryData.label}
                     </p>
                   </div>
-                  <span className="text-4xl font-black tracking-[-0.08em] text-[var(--color-brand-gold)]">
-                    {String(visibleProjects.length).padStart(2, "0")}
-                  </span>
+
                 </div>
 
                 <p className="mt-5 max-w-[30ch] text-sm leading-7 text-[rgba(238,244,250,0.74)] sm:text-[0.98rem]">
@@ -231,16 +455,12 @@ export default function ProjectsSection() {
                 })}
               </div>
 
-              <div className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+              <div className="mt-6 columns-1 gap-4 space-y-4 sm:columns-2 xl:columns-3">
                 {visibleProjects.map((project, index) => (
                   <motion.article
-                    key={`${activeCategory}-${project.title}`}
+                    key={`${activeCategory}-${project.title}-${index}`}
                     animate={{ opacity: 1, y: 0 }}
-                    className={`group relative overflow-hidden rounded-[28px] border border-[rgba(10,34,68,0.1)] bg-[var(--color-brand-blue-deep)] shadow-[0_28px_64px_-44px_rgba(10,34,68,0.34)] ${
-                      showFeaturedLayout && index === 0
-                        ? "sm:col-span-2 xl:col-span-2 xl:row-span-2"
-                        : ""
-                    }`}
+                    className="group relative break-inside-avoid overflow-hidden rounded-[28px] border border-[rgba(10,34,68,0.1)] bg-[var(--color-brand-blue-deep)] shadow-[0_28px_64px_-44px_rgba(10,34,68,0.34)]"
                     initial={{ opacity: 0, y: 18 }}
                     layout
                     transition={{
@@ -251,20 +471,18 @@ export default function ProjectsSection() {
                   >
                     <button
                       aria-label={`View full image for ${project.title}`}
-                      className={`relative block w-full text-left ${
-                        showFeaturedLayout && index === 0
-                          ? "min-h-[360px] sm:min-h-[420px]"
-                          : "min-h-[280px]"
-                      }`}
+                      className="relative block w-full text-left"
                       onClick={() => setSelectedProject(project)}
                       type="button"
                     >
                       <img
                         alt={project.title}
-                        className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-[1.04]"
+                        className="block min-h-[240px] w-full object-cover transition duration-500 group-hover:scale-[1.04]"
+                        decoding="async"
+                        loading="lazy"
                         src={project.image}
                       />
-                      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(6,16,29,0.08)_0%,rgba(6,16,29,0.24)_34%,rgba(6,16,29,0.82)_100%)]" />
+                      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(6,16,29,0)_0%,rgba(6,16,29,0.1)_40%,rgba(6,16,29,0.85)_100%)]" />
                       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(226,139,23,0.2),_transparent_28%)]" />
 
                       <div className="absolute right-4 top-4 rounded-full border border-white/18 bg-[rgba(6,16,29,0.4)] px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-white/80 backdrop-blur-md transition group-hover:bg-[rgba(6,16,29,0.55)]">
@@ -274,14 +492,11 @@ export default function ProjectsSection() {
                       <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
                         <div className="flex items-start justify-between gap-4">
                           <div>
-                            <span className="inline-flex rounded-full border border-white/18 bg-white/10 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-[var(--color-brand-gold-soft)] backdrop-blur-md">
+                            <span className="inline-flex rounded-full border border-white/20 bg-white/12 px-3 py-1 text-[0.7rem] font-bold uppercase tracking-[0.22em] text-[var(--color-brand-gold-soft)] backdrop-blur-md">
                               {categories.find(
                                 (category) => category.id === project.category,
                               )?.label ?? "Project"}
                             </span>
-                            <h3 className="mt-4 text-2xl font-semibold tracking-[-0.05em] text-white">
-                              {project.title}
-                            </h3>
                           </div>
 
                           <span className="hidden rounded-full border border-white/12 bg-[rgba(6,16,29,0.42)] px-3 py-1 text-xs font-medium text-[rgba(238,244,250,0.72)] backdrop-blur md:inline-flex">
@@ -289,14 +504,6 @@ export default function ProjectsSection() {
                           </span>
                         </div>
 
-                        <div className="mt-4 flex flex-wrap gap-2 text-xs font-medium text-[rgba(238,244,250,0.72)]">
-                          <span className="rounded-full bg-white/10 px-3 py-1 backdrop-blur-md">
-                            {project.stage}
-                          </span>
-                          <span className="rounded-full bg-white/10 px-3 py-1 backdrop-blur-md">
-                            {project.detail}
-                          </span>
-                        </div>
                       </div>
                     </button>
                   </motion.article>
@@ -333,8 +540,8 @@ export default function ProjectsSection() {
                 ×
               </button>
 
-              <div className="grid gap-0 lg:grid-cols-[minmax(0,1fr)_320px]">
-                <div className="flex min-h-[48vh] items-center justify-center bg-[radial-gradient(circle_at_top,_rgba(226,139,23,0.12),_transparent_24%),linear-gradient(180deg,rgba(6,16,29,0.86),rgba(4,10,20,0.96))] p-4 sm:p-6">
+              <div className="grid gap-0 lg:grid-cols-[1fr_340px]">
+                <div className="flex min-h-[48vh] items-center justify-center bg-[rgba(6,16,29,0.4)] p-4 sm:p-6">
                   <img
                     alt={selectedProject.title}
                     className="max-h-[78vh] w-auto max-w-full rounded-[20px] object-contain shadow-[0_30px_90px_-40px_rgba(0,0,0,0.85)]"
@@ -342,32 +549,35 @@ export default function ProjectsSection() {
                   />
                 </div>
 
-                <div className="flex flex-col justify-between border-t border-white/10 p-6 text-white lg:border-l lg:border-t-0">
-                  <div>
-                    <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--color-brand-gold-soft)]">
-                      Image Viewer
+                <div className="flex flex-col justify-between p-6 text-white sm:p-8 lg:p-10">
+                  <div className="pt-10 sm:pt-8 lg:pt-6">
+                    <p className="text-xs font-bold uppercase tracking-[0.28em] text-[var(--color-brand-gold-soft)]">
+                      {categories.find(
+                        (category) => category.id === selectedProject.category,
+                      )?.label ?? "Project"} Solution
                     </p>
-                    <h3 className="mt-4 text-3xl font-semibold tracking-[-0.05em] text-white">
+                    <h3 className="mt-5 text-3xl font-bold tracking-tight text-white sm:text-4xl">
                       {selectedProject.title}
                     </h3>
-                    <div className="mt-5 flex flex-wrap gap-2 text-xs font-medium text-[rgba(238,244,250,0.82)]">
-                      <span className="rounded-full border border-white/10 bg-white/8 px-3 py-1.5">
-                        {categories.find(
-                          (category) => category.id === selectedProject.category,
-                        )?.label ?? "Project"}
-                      </span>
-                      <span className="rounded-full border border-white/10 bg-white/8 px-3 py-1.5">
+                    <div className="mt-8 space-y-4">
+                      <p className="text-sm leading-7 text-[rgba(238,244,250,0.82)]">
+                        <span className="block font-semibold uppercase tracking-wider text-[rgba(238,244,250,0.44)] text-[0.65rem] mb-1">Current Stage</span>
                         {selectedProject.stage}
-                      </span>
-                      <span className="rounded-full border border-white/10 bg-white/8 px-3 py-1.5">
+                      </p>
+                      <p className="text-sm leading-7 text-[rgba(238,244,250,0.74)]">
+                        <span className="block font-semibold uppercase tracking-wider text-[rgba(238,244,250,0.44)] text-[0.65rem] mb-1">Technical Detail</span>
                         {selectedProject.detail}
-                      </span>
+                      </p>
                     </div>
                   </div>
 
-                  <p className="mt-8 text-sm leading-7 text-[rgba(238,244,250,0.68)]">
-                    Click outside the frame or press Escape to close the viewer.
-                  </p>
+                  <button
+                    className="mt-10 rounded-full bg-[var(--color-brand-gold)] px-8 py-4 text-sm font-bold text-[var(--color-brand-blue-deep)] shadow-[0_20px_40px_-12px_rgba(226,139,23,0.3)] transition hover:-translate-y-0.5 hover:bg-[var(--color-brand-gold-soft)] hover:shadow-[0_24px_48px_-12px_rgba(226,139,23,0.4)]"
+                    onClick={() => setSelectedProject(null)}
+                    type="button"
+                  >
+                    Close Viewer
+                  </button>
                 </div>
               </div>
             </motion.div>

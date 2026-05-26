@@ -3,7 +3,10 @@ import { useEffect, useState } from "react";
 import ContactEnquiryDialog from "./ContactEnquiryDialog";
 import { WHATSAPP_URL } from "../utils/contact";
 
-const heroSlides = ["/landing_image.PNG", "/landingpage_slideshow/IMG_2900.PNG"];
+const heroSlides = ["/landing_image.webp",
+  "/landingpage_slideshow/IMG_MODULAR.webp",
+  "/landingpage_slideshow/IMG_2900.webp",
+  "/landingpage_slideshow/IMG_2901.webp",];
 
 function ArrowCircleIcon() {
   return (
@@ -58,6 +61,9 @@ function ContactIcon() {
 export default function Hero() {
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
   const [activeSlide, setActiveSlide] = useState(0);
+  // Track which slides have been requested so we only download images on demand.
+  // Slide 0 is always pre-loaded (it's the LCP element).
+  const [loadedSlides, setLoadedSlides] = useState(() => new Set([0]));
 
   useEffect(() => {
     if (heroSlides.length < 2) {
@@ -65,7 +71,17 @@ export default function Hero() {
     }
 
     const intervalId = window.setInterval(() => {
-      setActiveSlide((currentSlide) => (currentSlide + 1) % heroSlides.length);
+      setActiveSlide((currentSlide) => {
+        const next = (currentSlide + 1) % heroSlides.length;
+        // Preload the upcoming slide one tick ahead
+        setLoadedSlides((prev) => {
+          if (prev.has(next)) return prev;
+          const updated = new Set(prev);
+          updated.add(next);
+          return updated;
+        });
+        return next;
+      });
     }, 4500);
 
     return () => window.clearInterval(intervalId);
@@ -81,23 +97,29 @@ export default function Hero() {
           {heroSlides.map((slide, index) => (
             <img
               key={slide}
-              alt="Westeel landing background"
-              className={`absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-[1600ms] ease-out ${
-                index === activeSlide ? "opacity-100" : "opacity-0"
-              }`}
-              src={slide}
+              alt="Westeel steel building project"
+              className={`absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-[1600ms] ease-out ${index === activeSlide ? "opacity-100" : "opacity-0"
+                }`}
+              decoding="async"
+              fetchPriority={index === 0 ? "high" : "low"}
+              height="1080"
+              loading={index === 0 ? "eager" : "lazy"}
+              // Only assign src once the slide has been activated — avoids
+              // downloading all 4 images up front (was the 961 KiB LCP hit)
+              src={loadedSlides.has(index) ? slide : undefined}
+              width="1920"
             />
           ))}
         </div>
-        <div className="absolute inset-0 bg-[rgba(17,14,12,0.42)]" />
+        <div className="absolute inset-0 bg-[rgba(17,14,12,0.0)]" />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(16,13,11,0.68)_0%,rgba(24,19,15,0.56)_35%,rgba(20,17,14,0.48)_68%,rgba(12,10,9,0.72)_100%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(226,139,23,0.18),_transparent_24%),radial-gradient(circle_at_bottom_left,_rgba(120,128,138,0.12),_transparent_28%)]" />
       </div>
 
-      <div className="relative z-10 flex min-h-screen items-center justify-center px-4 pb-12 pt-28 sm:px-6 sm:pt-32 lg:px-8 lg:pb-16 lg:pt-36">
+      <div className="relative z-10 flex min-h-screen items-center justify-center px-4 pb-12 pt-28 sm:px-6 sm:pt-32 lg:px-8 lg:pb-16 lg:pt-30">
         <motion.div
           animate={{ opacity: 1, x: 0 }}
-          className="mx-auto flex max-w-[760px] flex-col items-center text-center [text-shadow:0_2px_18px_rgba(0,0,0,0.65)]"
+          className="mx-auto flex max-w-[900px] flex-col items-center text-center [text-shadow:0_2px_18px_rgba(0,0,0,0.65)]"
           initial={{ opacity: 0, x: -32 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
@@ -105,11 +127,12 @@ export default function Hero() {
             Building the Future, Today
           </span>
 
-          <h1 className="mt-7 text-[3.5rem] font-black leading-[0.88] tracking-[-0.07em] text-[var(--color-brand-gold)] [text-shadow:0_6px_30px_rgba(0,0,0,0.5)] sm:mt-8 sm:text-6xl sm:leading-[0.9] sm:tracking-[-0.065em] lg:text-[5.25rem]">
-            <span className="block">Steel &amp;</span>
-            <span className="block">Modular</span>
-            <span className="block text-[3.35rem] leading-[0.9] sm:text-inherit sm:leading-inherit">
-              Construction
+          <h1 className="mt-7 font-black text-[var(--color-brand-gold)] [text-shadow:0_6px_30px_rgba(0,0,0,0.5)] sm:mt-8">
+            <span className="block text-[1.8rem] leading-[1.1] tracking-[-0.05em] sm:text-[3rem] lg:text-[3.8rem]">
+              Pre-Engineered Building System
+            </span>
+            <span className="block text-[1.2rem] leading-[1.1] tracking-[-0.02em] sm:text-[2rem] lg:text-[2.4rem] opacity-90 mt-2 sm:mt-4">
+              Modular Construction
             </span>
           </h1>
 
@@ -167,11 +190,10 @@ export default function Hero() {
               <button
                 key={`${slide}-dot`}
                 aria-label={`Show slide ${index + 1}`}
-                className={`h-2.5 rounded-full transition-all duration-300 ${
-                  isActive
+                className={`h-2.5 rounded-full transition-all duration-300 ${isActive
                     ? "w-10 bg-[var(--color-brand-gold)]"
                     : "w-2.5 bg-white/45 hover:bg-white/75"
-                }`}
+                  }`}
                 onClick={() => setActiveSlide(index)}
                 type="button"
               />
