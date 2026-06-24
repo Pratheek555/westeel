@@ -50,7 +50,7 @@ const categories = [
 const projects = [
   // warehouses
   {
-    title: "PEB Frame Installation",
+    title: "Frame Installation",
     category: "warehouse",
     image: "/projects/warehouse1.PNG",
     stage: "Steel structure execution",
