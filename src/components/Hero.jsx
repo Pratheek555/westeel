@@ -111,7 +111,7 @@ export default function Hero() {
             />
           ))}
         </div>
-        <div className="absolute inset-0 bg-[rgba(17,14,12,0.0)]" />
+        <div className="absolute inset-0 bg-[rgba(17,14,12,0.0)]/0" />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(16,13,11,0.68)_0%,rgba(24,19,15,0.56)_35%,rgba(20,17,14,0.48)_68%,rgba(12,10,9,0.72)_100%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(226,139,23,0.18),_transparent_24%),radial-gradient(circle_at_bottom_left,_rgba(120,128,138,0.12),_transparent_28%)]" />
       </div>
